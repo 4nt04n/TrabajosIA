@@ -1,0 +1,43 @@
+Degrees of Separation
+
+Este código implementa un programa en Python llamado degrees.py que calcula el grado de separación entre dos personas en función de las películas en las que han participado. El programa utiliza algoritmos de búsqueda en amplitud (BFS) y búsqueda en profundidad (DFS) para encontrar el camino más corto entre dos personas.
+Estructura del Código
+
+El código consta de las siguientes partes:
+
+    Importación de Módulos:
+        csv: para trabajar con archivos CSV.
+        sys: para interactuar con el sistema operativo.
+        os: para limpiar la pantalla.
+        collections: para utilizar la clase deque (cola doble) en BFS.
+
+    Estructuras de Datos:
+        Diccionarios para mapear nombres a identificadores de personas, identificadores de personas a detalles personales y películas a detalles de películas.
+
+    Funciones Principales:
+        load_data(directory): Carga los datos desde archivos CSV en la memoria.
+        main(): Interfaz principal del usuario para ingresar nombres y seleccionar el método de búsqueda (BFS o DFS).
+        shortest_path(source, target, metodo): Encuentra el camino más corto entre dos personas utilizando BFS o DFS.
+        person_id_for_name(name): Devuelve el ID de una persona dado su nombre, manejando ambigüedades si es necesario.
+        neighbors_for_person(person_id): Devuelve las parejas (movie_id, person_id) para personas que han trabajado en las mismas películas.
+
+Uso del Programa
+
+    El usuario selecciona el método de búsqueda (BFS o DFS).
+    Ingresa el nombre de la persona de origen.
+    Ingresa el nombre de la persona objetivo.
+    El programa muestra el grado de separación y el camino más corto entre las dos personas.
+
+Ejemplo de Ejecución:
+
+bash
+
+python degrees.py [directory]
+
+El directorio es opcional y por defecto se establece como "large". Este directorio contiene archivos CSV con información sobre personas y películas.
+
+Nota:
+
+    El programa asume que los datos están organizados en archivos CSV con columnas específicas. Asegúrate de que los archivos de datos sigan el formato esperado.
+
+Este README proporciona una descripción general del propósito del programa y cómo interactuar con él. Si es necesario, se pueden agregar más detalles o instrucciones según las necesidades específicas del proyecto.

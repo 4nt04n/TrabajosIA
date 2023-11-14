@@ -1,0 +1,27 @@
+Clasificación de Compras - Modelo K-Nearest Neighbors
+
+Este código en Python implementa un clasificador de compras utilizando el algoritmo de K-Nearest Neighbors (KNN). El modelo se entrena con datos de compras y evalúa su desempeño en la clasificación de compras como "con ingresos" o "sin ingresos". A continuación, se presenta una descripción general del código.
+Funcionalidades Principales
+
+    Carga de Datos: La función load_data carga datos de compras desde un archivo CSV, convirtiéndolos en listas de evidencia y etiquetas. La evidencia contiene diversas características de las compras, mientras que las etiquetas indican si la compra generó ingresos.
+
+    Entrenamiento del Modelo: La función train_model entrena un modelo KNN con k=3 utilizando la biblioteca scikit-learn.
+
+    Evaluación del Modelo: La función evaluate calcula la sensibilidad y la especificidad del modelo en base a las predicciones realizadas en un conjunto de datos de prueba.
+
+    Pruebas y Resultados: El programa principal (main) carga los datos, divide el conjunto en entrenamiento y prueba, entrena el modelo, realiza predicciones y evalúa su desempeño, mostrando el resultado en términos de predicciones correctas, sensibilidad y especificidad.
+
+Uso del Código
+
+    Ejecución:
+        Ejecutar el script desde la línea de comandos proporcionando el nombre del archivo de datos como argumento. Ejemplo: python shopping.py data.csv.
+
+    Resultados:
+        Se imprimirán en la consola estadísticas sobre la precisión del modelo, incluyendo el número de predicciones correctas, incorrectas, la tasa de verdaderos positivos y la tasa de verdaderos negativos.
+
+python
+
+# Ejemplo de Uso
+python shopping.py data.csv
+
+Este código proporciona un ejemplo básico de cómo entrenar y evaluar un modelo KNN para clasificar compras basándose en diversas características. Asegúrate de tener la biblioteca scikit-learn instalada (pip install scikit-learn) antes de ejecutar el código

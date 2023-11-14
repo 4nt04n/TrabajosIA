@@ -1,0 +1,32 @@
+Reconocimiento de Señales de Tráfico con Redes Neuronales
+
+Este código en Python utiliza TensorFlow y OpenCV para entrenar un modelo de red neuronal convolucional (CNN) que puede reconocer señales de tráfico. A continuación, se presenta un resumen del código.
+Funcionalidades Principales
+
+    Carga de Datos: La función load_data carga imágenes de señales de tráfico desde un directorio estructurado, asignando etiquetas a cada categoría.
+
+    División de Datos: Divide el conjunto de datos en conjuntos de entrenamiento y prueba.
+
+    Definición del Modelo: La función get_model define y compila un modelo de red neuronal convolucional (CNN) utilizando TensorFlow y Keras.
+
+    Entrenamiento del Modelo: Utiliza el conjunto de entrenamiento para entrenar el modelo con un número especificado de épocas.
+
+    Evaluación del Rendimiento: Evalúa el rendimiento del modelo utilizando el conjunto de prueba y muestra la precisión alcanzada.
+
+    Guardado del Modelo: Opcionalmente, guarda el modelo entrenado en un archivo .h5 si se proporciona un segundo argumento en la línea de comandos.
+
+Uso del Código
+
+    Ejecución:
+        Ejecutar el script desde la línea de comandos proporcionando el directorio de datos y, opcionalmente, un nombre de archivo para guardar el modelo. Ejemplo: python traffic.py data_directory.
+
+    Resultados:
+        Se imprimirán estadísticas sobre la precisión del modelo en el conjunto de prueba.
+        Si se proporciona un nombre de archivo, el modelo se guardará en ese archivo.
+
+python
+
+# Ejemplo de Uso
+python traffic.py data_directory 
+
+Este código proporciona una introducción básica al reconocimiento de señales de tráfico mediante una red neuronal convolucional. Asegúrate de tener las bibliotecas TensorFlow y OpenCV instaladas antes de ejecutar el código (pip install tensorflow opencv-python).

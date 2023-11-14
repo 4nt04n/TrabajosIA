@@ -1,0 +1,43 @@
+Buscaminas con Inteligencia Artificial
+
+Este código implementa un jugador de inteligencia artificial para el clásico juego del Buscaminas en Python. La inteligencia artificial realiza movimientos seguros y marca minas mediante el mantenimiento de una base de conocimientos de declaraciones lógicas sobre el juego.
+Funcionalidades Principales
+
+    Juego del Buscaminas: La clase Minesweeper representa el juego del Buscaminas, permitiendo la inicialización del tablero con minas aleatorias y proporcionando métodos para imprimir el tablero, verificar la presencia de minas y contar las minas cercanas a una celda.
+
+    Declaraciones Lógicas: La clase Sentence representa declaraciones lógicas sobre el juego, como las celdas conocidas como minas o seguras. Permite la actualización de estas declaraciones cuando se descubren nuevas celdas.
+
+    Inteligencia Artificial: La clase MinesweeperAI actúa como un jugador de inteligencia artificial. Puede marcar minas y realizar movimientos seguros mediante el análisis de declaraciones lógicas y la actualización de su base de conocimientos.
+
+Uso del Código
+
+    Configuración del Juego:
+        Crear una instancia de la clase Minesweeper para representar el juego.
+        Iniciar la instancia de la inteligencia artificial (MinesweeperAI).
+
+    Jugar el Juego:
+        Utilizar métodos como make_safe_move() y make_random_move() para que la IA realice movimientos seguros o aleatorios.
+        Actualizar la base de conocimientos con nuevas declaraciones basadas en movimientos seguros.
+
+    Finalización del Juego:
+        Continuar jugando hasta que todas las minas hayan sido marcadas o se complete el juego.
+
+python
+
+# Ejemplo de Uso
+buscaminas = Minesweeper(height=8, width=8, mines=8)
+buscaminas.print()
+
+jugador_ia = MinesweeperAI(height=8, width=8)
+
+while not buscaminas.won():
+    movimiento = jugador_ia.make_safe_move() or jugador_ia.make_random_move()
+
+    if movimiento:
+        count = buscaminas.nearby_mines(movimiento)
+        jugador_ia.add_knowledge(movimiento, count)
+        buscaminas.print()
+
+print("¡Juego Terminado! ¡Ganaste!")
+
+Este código ofrece una implementación interactiva del Buscaminas, donde la inteligencia artificial toma decisiones informadas para avanzar en el juego de manera estratégica. ¡Diviértete jugando al Buscaminas con la inteligencia artificial!
